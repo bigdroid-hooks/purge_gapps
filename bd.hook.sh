@@ -173,7 +173,7 @@ GOOGLE_BLOAT=(
 # read -n1 -p "$(geco "\n++++ Sure to debloat ?  [${BGREEN}Y${RC} / n]  ")" c
 
 rm_bloat(){
-	geco "\n>>>> Removing ${PINK}$bloat${RC}\c" && rm -r "$1/$bloat" 2>/dev/null || geco " :: ${PINK}Failed${RC}"
+	geco "\n>>>> Removing $bloat\c" && rm -r "$1/$bloat" 2>/dev/null || geco " :: Failed"
 }
 
 # case $c in
@@ -202,7 +202,7 @@ rm_bloat(){
 
 		#### Start Google/MicroG debloat
 		geco "\n\n ### If you want to unGoogle / unMicroG then press Y (Warning, this means removing PlayStore & GooglePlayServices)"
-		read -n1 -p "$(geco "\n++++ Sure to remove Google/MicroG apps ?  [${BGREEN}N${RC} / y]  ")" c
+		read -n1 -p "$(geco "\n++++ Sure to remove Google/MicroG apps ?  [N / y]  ")" c
 		
 		case $c in
 		
