@@ -200,18 +200,18 @@ rm_bloat(){
 # 		#### End Extra bloat
 
 		#### Start Google/MicroG debloat
-		geco "\n\n ### If you want to unGoogle / unMicroG then press Y (Warning, this means removing PlayStore & GooglePlayServices)"
-		read -n1 -p "$(geco "\n++++ Sure to remove Google/MicroG apps ?  [N / y]  ")" c
-
-		case $c in
-
-			[Nn] )
-
-				geco "\n+++ ${_as_you_wish_}"
-
-			;;
-
-			[Yy] )
+# 		geco "\n\n ### If you want to unGoogle / unMicroG then press Y (Warning, this means removing PlayStore & GooglePlayServices)"
+# 		read -n1 -p "$(geco "\n++++ Sure to remove Google/MicroG apps ?  [N / y]  ")" c
+#
+# 		case $c in
+#
+# 			[Nn] )
+#
+# 				geco "\n+++ ${_as_you_wish_}"
+#
+# 			;;
+#
+# 			[Yy] )
 
 				echo
 				for bloat_name in "${GOOGLE_BLOAT[@]}" "${MICROG_BLOAT[@]}"; do
@@ -226,9 +226,9 @@ rm_bloat(){
 
 				done
 				echo
-			;;
-
-		esac
+# 			;;
+#
+# 		esac
 		#### End Google/MicroG debloat
 
 # 	;;
